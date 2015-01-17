@@ -77,17 +77,22 @@ module WiringPi
 
   class GPIO
 
+    # GPIO_PINS = [
+    #   0,1,4,7,8,9,10,11,14,15,17,18,21,22,23,24,25 # seemingly random indeed!
+    #   ]
     GPIO_PINS = [
-      0,1,4,7,8,9,10,11,14,15,17,18,21,22,23,24,25 # seemingly random indeed!
+      2,3,4,17,27,22,10,9,11,5,6,13,19,26,18,23,24,25,8,7,12,16,20,21# seemingly random indeed!
       ]
 
+    # PINS = [
+    #   0,1,2,3,4,5,6,7, # basic IO pins
+    #   8,9,             # i2c with 1k8 pull up resistor
+    #   10,11,12,13,14,     # SPI pins, can also be used for IO
+    #   15,16,17
+    #   ]
     PINS = [
-      0,1,2,3,4,5,6,7, # basic IO pins
-      8,9,             # i2c with 1k8 pull up resistor
-      10,11,12,13,14,     # SPI pins, can also be used for IO
-      15,16,17
+      2,3,4,17,27,22,10,9,11,5,6,13,19,26,18,23,24,25,8,7,12,16,20,21# seemingly random indeed!
       ]
-
     @mode = WPI_MODE_PINS
 
     @@init = false  # once wiringPiSetup has been called, we don't have to do it again
